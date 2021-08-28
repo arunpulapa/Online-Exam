@@ -1,0 +1,11 @@
+.contactus{
+    background-image: url('../../../assets/images/contactus.jpg');
+    background-position: no-repeat;
+    background-size: cover;
+    height: 700px;
+    /* background-attachment: fixed; */
+}
+h4{
+    color: white;
+    font-family: emoji;
+}

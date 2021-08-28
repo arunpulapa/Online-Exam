@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Raj Kumar",
+        "gender":"Male",
+        "place":"Hyderabad"
+    },
+    {
+        "id":2,
+        "name":"Kumar",
+        "gender":"Male",
+        "place":"Hyderabad"
+    },
+    {
+        "id":3,
+        "name":"Pawan",
+        "gender":"Male",
+        "place":"Hyderabad"
+    },
+    {
+        "id":4,
+        "name":"Rajesh",
+        "gender":"Male",
+        "place":"Hyderabad"
+    }
+]

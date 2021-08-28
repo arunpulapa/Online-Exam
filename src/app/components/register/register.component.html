@@ -1,0 +1,62 @@
+<div class="container-fluid register" style="margin-top: 20px;">
+    <div class="row" style="padding-top: 20px">
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h4 class="text-primary"> Register</h4>
+            <form action="" #registerform="ngForm" (ngSubmit)="registerform.valid && register(registerform.value)">
+                <div class="form-group">
+                    <label for=""> Username</label>
+                    <input type="text" name="username" autocomplete="new-password" ngModel class="form-control" #uname="ngModel" minlength="10"
+                        required [ngClass]="{ 'is-invalid': registerform.submitted && uname.errors }">
+                    <div *ngIf="registerform.submitted && uname.invalid && (uname.dirty || uname.untouched || uname.touched)" class="invalid-feedback">
+                        <div *ngIf="uname.errors.required">Username required!!!</div>
+                        <div *ngIf="uname.errors.minlength">Username Maximum 10 characters only!!!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=""> Password</label>
+                    <input type="password" name="password" autocomplete="new-password" ngModel class="form-control" #pwd="ngModel" minlength="10"
+                        required [ngClass]="{ 'is-invalid': registerform.submitted && pwd.errors }">
+                    <div *ngIf="registerform.submitted && pwd.invalid && (pwd.dirty || pwd.untouched || pwd.touched)" class="invalid-feedback">
+                        <div *ngIf="pwd.errors.required">Password required!!!</div>
+                        <div *ngIf="pwd.errors.minlength">Password Maximum 10 characters only!!!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=""> Phone</label>
+                    <input type="tel" name="phone" ngModel class="form-control" #phone="ngModel" minlength=10 maxlength=10 required [ngClass]="{ 'is-invalid': registerform.submitted && phone.errors }">
+                    <div *ngIf="registerform.submitted && phone.invalid && (phone.dirty || phone.untouched || phone.touched)" class="invalid-feedback">
+                        <div *ngIf="phone.errors.required">Phone no required!!!</div>
+                        <div *ngIf="phone.errors.minlength">Phone Maximum 10 characters only!!!
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=""> City </label>
+                    <input type="adress" name="city" ngModel class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for=""> Email</label>
+                    <input type="email" name="email" ngModel class="form-control" #email="ngModel" minlength=10 required [ngClass]="{ 'is-invalid': registerform.submitted && email.errors }">
+                    <div *ngIf="registerform.submitted && email.invalid && (email.dirty || email.untouched || email.touched)" class="invalid-feedback">
+                        <div *ngIf="email.errors.required">Email no required!!!</div>
+                       
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for=""> Gender </label>
+                    <br>
+                    <input type="radio" name="gender" ngModel value="male"> &nbsp;Male
+                    <br>
+                    <input type="radio" name="gender" ngModel value="female"> &nbsp;Female
+                </div>
+                <div class="form-group" style="text-align: right;padding-bottom: 20px;">
+                    <button class="btn btn-primary" type="submit"> Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

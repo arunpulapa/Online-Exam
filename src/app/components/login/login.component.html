@@ -1,0 +1,35 @@
+<div class="container-fluid login" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <h4 class="text-primary"> Login</h4>
+                <form action="" #loginform="ngForm" (ngSubmit)="loginform.valid && login(loginform.value)">
+                    <div class="form-group">
+                        <label for=""> Username</label>
+                        <input type="text" name="username" autocomplete="new-password" ngModel class="form-control" #uname="ngModel" minlength="10" required [ngClass]="{ 'is-invalid': loginform.submitted && uname.errors }">
+                        <div *ngIf="loginform.submitted && uname.invalid && (uname.dirty || uname.untouched || uname.touched)" class="invalid-feedback">
+                            <div *ngIf="uname.errors.required">Username required!!!</div>
+                            <div *ngIf="uname.errors.minlength">Username Maximum 10 characters only!!!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for=""> Password</label>
+                        <input type="password" name="password" autocomplete="new-password" ngModel class="form-control" #pwd="ngModel" minlength="10" required [ngClass]="{ 'is-invalid': loginform.submitted && pwd.errors }">
+                        <div *ngIf="loginform.submitted && pwd.invalid && (pwd.dirty || pwd.untouched || pwd.touched)" class="invalid-feedback">
+                            <div *ngIf="pwd.errors.required">Password required!!!</div>
+                            <div *ngIf="pwd.errors.minlength">Password Maximum 10 characters only!!!
+                            </div>
+                        </div>
+                    </div>           
+                    <div class="form-group">
+                            <label for=""> Role</label>-
+                            <input type="radio" name="role" value="user"  ngModel > User
+                            <input type="radio" name="role" value="admin"  ngModel > Admin
+                        </div>         
+                    <div class="form-group" style="text-align: right;">
+                        <button class="btn btn-primary" type="submit"> Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-4"></div>

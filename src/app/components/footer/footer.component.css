@@ -1,0 +1,21 @@
+.footer{
+    background-color: lightslategray;
+    height: 120px;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+.footer-bot{
+    background-color: lightblue;
+    height: 120px;
+    border-radius: 1px;
+}
+.footer p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+.bot-p{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+}
